@@ -26,7 +26,7 @@ SECRET_KEY = '&dtzi36g3dlbal1$20q2c=bs-76i#v+$j1=3bfhculjel3*ji5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app' , '.now.sh']
 
 
 # Application definition
@@ -140,3 +140,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get("EMAIL_USER")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_PASS")
+
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static')
